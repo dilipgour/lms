@@ -30,7 +30,7 @@ try{
         return res.status(400).json({ error: "user already exists" });
     }
    const hash = await bcrypt.hashSync(password,10)
-    const newuser = await db.insert(user).values({ name, email, password:hash }).returning();
+   const newuser = await db.insert(user).values({ name, email, password:hash }).returning();
     generateToken(newuser[0].id,res)
     
      const userTosend = {

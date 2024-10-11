@@ -4,8 +4,7 @@ import { user } from "../schema.js";
 
 const auth = async(req,res,next)=>{
   const {accessToken} = req.cookies
-  // console.log(req.cookies)
-   //console.log(accessToken)
+  
   if(!accessToken||accessToken==undefined){
     return res.status(401).json({error:"unauthorized"})
   }

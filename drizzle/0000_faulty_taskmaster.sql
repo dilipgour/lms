@@ -23,8 +23,7 @@ CREATE TABLE IF NOT EXISTS "courses" (
 	"is_published" boolean DEFAULT false,
 	"category_id" uuid,
 	"created_at" date DEFAULT now(),
-	"updated_at" date DEFAULT now(),
-	"attachments" text
+	"updated_at" date DEFAULT now()
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "user" (
